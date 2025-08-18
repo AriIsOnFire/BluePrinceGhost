@@ -59,7 +59,7 @@ RandomTalk : nonoverlap_pool
 	
 	"\0\s[0]I NEED TO CHANGE SOMETHING FOR THIS TO TEST AND WORK.\e"
 	
-	"\1\s[10]This is a single line of dialogue for the side character.\e"
+	"\0\s[0]This is just an example!\e"
 	
 	//Single lines of dialogue like this are simple and easy to do.
 	
