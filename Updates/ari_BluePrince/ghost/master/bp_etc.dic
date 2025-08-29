@@ -21,7 +21,7 @@ OnFileDrop2
 		{
 			Wallpaperfile = reference0
 			
-			"\0\s[0]The file you dropped is %(_filename)%(_fileext).\w8\1\s[10]How would you like us to set this picture as your wallpaper?\n\n[half]/
+			"\0\s[0]Looks like this is\w4.\w4.\w4. %(_filename)%(_fileext).\w8 Apparently, it can be set as a wallpaper, uh\w4.\w4.\w4. How do you want me to do that?\w8\n\n[half]/
 			\![*]\q[Centered,SetWallpaper_0]\n/
 			\![*]\q[Tiled,SetWallpaper_1]\n/
 			\![*]\q[Stretched,SetWallpaper_2]\n\n[half]/
@@ -29,11 +29,11 @@ OnFileDrop2
 		}
 		when ".mid", ".wav", ".mp3", ".wma", ".au" //Other file formats you might want to give your ghost a specific response to.
 		{
-			"\1\s[10]%(_filename)%(_fileext) is a music file.\e"
+			"\0\s[0]%(_filename)%(_fileext)\w4.\w4.\w4. Oh, an audio file!\w8 I don't have the ability to play it,\w4 unfortunately,\w4 but it looks cool!\w8\e"
 		}
 		others //Any other file format. As a note here, if you drop something ghost-related on them that does not have an install.txt, then they won't install it and will just say this response. If you are testing your balloon or nar files and you get this response instead of a proper installation, you should check and make sure you have an install.txt in the file!
 		{
-			"\0\s[0]This is %(_filename)%(_fileext).\e"
+			"\0\s[0]This is\w4.\w4.\w4. %(_filename)%(_fileext).\w8 Not too sure what you want me to do with this, honestly\w4.\w4.\w4.\w8\e"
 		}
 	}
 }
@@ -42,19 +42,19 @@ OnFileDrop2
 
 Select.SetWallpaper_0
 {
-	"\![set,wallpaper,%(Wallpaperfile),center]\0\s[0]The image is centered.\e"
+	"\![set,wallpaper,%(Wallpaperfile),center]\0\s[0]Centered it is!\w8\e"
 }
 Select.SetWallpaper_1
 {
-	"\![set,wallpaper,%(Wallpaperfile),tile]\0\s[0]The image is tiled.\e"
+	"\![set,wallpaper,%(Wallpaperfile),tile]\0\s[0]Tiled\w4.\w4.\w4.\e"
 }
 Select.SetWallpaper_2
 {
-	"\![set,wallpaper,%(Wallpaperfile),stretch]\0\s[0]The image is stretched.\e"
+	"\![set,wallpaper,%(Wallpaperfile),stretch]\0\s[0]Big Stretch!\w8\e"
 }
 Select.SetWallpaper_Cancel
 {
-	"\0\s[0]You don't want to set the file as your desktop background.\1\s[10]Kay.\e"
+	"\0\s[0]Oh,\w4 did you just want to show me the image?\w8 Oh,\w4 sorry!\w8 Thanks for showing me the picture!\e"
 }
 
 
@@ -63,7 +63,7 @@ Select.SetWallpaper_Cancel
  
 OnInstallBegin
  {
-	"\0\s[0]This is the beginning dialogue for installing a file.\w8\1\s[10]This zip or nar contains an install.txt file.\e"
+	"\0\s[0]Oh,\w4 uh\w4.\w4.\w4. You want me to install this?\w8 I'll do my best!\w8\e"
  }
 
  //---- OnInstallComplete -------------------------------------------------------
@@ -75,19 +75,19 @@ OnInstallComplete
  	--
 	if reference0 == "shell" //This is checking to see if what you installed is classified as a shell in the install.txt. Remember the line in install.txt that said type,ghost or type,shell? This is why that line is important, that's what tells the program what it's installing like so.
  	{	
-		if reference1 == "Hypothetical Shell that doesn't actually exist" //This is the name of your shell as you defined in descript.txt in the shell folder.
+		if reference1 == "Healing Arc" //This is the name of your shell as you defined in descript.txt in the shell folder.
 		{
-		"\s[0]We have installed Hypothetical Shell.\w8\1\s[10]Truncated for space.\e"
+		"\s[0]Oh,\w4 uh\w4.\w4.\w4. This shell is called\w4.\w4.\w4. \f[italic,true]Healing Arc?\f[default]\w8 What does that mean?\w8\e"
 		//Replace if needed.
 		}
-		elseif reference1 == "Another totally real shell wow" //As in other files, you can use elseif to expand a list like this to include as many shells as you have or think you'll make. See bootend.dic for more details about elseif.
+		elseif reference1 == "Bone Servant" //As in other files, you can use elseif to expand a list like this to include as many shells as you have or think you'll make. See bootend.dic for more details about elseif.
 		{
-		"\s[0]We have installed another totally real shell.\e"
+		"\s[0]\w4.\w4.\w4. I\w4.\w4.\w4. I see.\w8\e"
 		//Replace if needed.
 		}
 		else //For any other shell they may install.
 		{
-		"\s[0]We've installed a new shell.\w8\1\s[10]It's called  %(reference1).\e"
+		"\s[0]New shell inbound!\w8 It's called  %(reference1).\w8\e"
 		//%(reference1) here would be the name of the shell they installed. Replace if needed.
 		}
  	}

@@ -7,7 +7,7 @@ file,ghost/master/bp_aitalk.diccf1d0c56557d6a6d0fa85e9807cdcd08size=41297date
 file,ghost/master/bp_anchor.dic8a4f82ac7b47bb7ede6b046ae940cb3bsize=5178date=2021-12-12T05:05:56
 file,ghost/master/bp_bootend.dic30400bd480e545d3c69b60d69d337467size=38015date=2021-09-06T19:47:51
 file,ghost/master/bp_commu.dica8e02d3cd7c9f5136c2049bf8a144512size=6643date=2020-11-07T03:42:18
-file,ghost/master/bp_etc.dic542b8263484be9ed3022c400ea1eb427size=35422date=2022-01-07T16:24:55
+file,ghost/master/bp_etc.dicf29a769df94a6b5143f86097e9a2d2a3size=35591date=2025-08-29T06:20:03
 file,ghost/master/bp_menu.dicdade8bfa7b4d22aca002cc043ca1b758size=32595date=2021-07-11T07:23:54
 file,ghost/master/bp_mouse.dic730657aba5c480243c4a920207d39080size=12241date=2020-10-29T23:57:48
 file,ghost/master/bp_nameteach.dic277cca0bc3a11f79a0291a4076c33163size=9460date=2020-11-07T04:17:51
